@@ -6,7 +6,7 @@
   <title>2026新春盛宴集氣</title>
   <style>
     :root{
-      --brand-accent:#ff6f61; /* 按鈕主色 */
+      --brand-accent:#ff6f61;
       --brand-accent-hover:#ff8a75;
       --section-bg:#FFF7ED;
       --tag-bg: orange;
@@ -15,9 +15,8 @@
       --radius: 12px;
     }
 
-    /* 全站基礎 */
     body {
-      font-family: "Noto Sans TC", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+      font-family: "Noto Sans TC", sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
@@ -25,22 +24,20 @@
       color: var(--text);
     }
 
-    /* ✅ Banner：滿版覆蓋頂端，不留白 */
+    /* ✅ Banner：滿版覆蓋頂端 */
     header {
       width: 100%;
-      height: 260px; /* 桌機高度，可依需求調整 */
+      height: 260px;
       background: url("banner-2026.png") no-repeat center center;
       background-size: cover;
     }
 
-    /* 主要容器 */
     section {
       padding: 20px;
       max-width: var(--container-max);
       margin: auto;
     }
 
-    /* 小標題色塊 */
     h2 {
       background-color: var(--tag-bg);
       color: white;
@@ -50,11 +47,9 @@
       margin-top: 24px;
     }
 
-    /* 段落/列表 */
     ul { padding-left: 20px; margin: 8px 0 0; }
     ol { padding-left: 20px; margin: 8px 0 0; }
 
-    /* 多欄區塊（特別加碼、活動資格） */
     .columns {
       display: flex;
       flex-wrap: wrap;
@@ -68,18 +63,18 @@
       border-radius: var(--radius);
     }
 
-    /* ✅ 集點卡圖片：置中、圓角＋陰影、RWD 尺寸 */
+    /* ✅ 集點卡圖片 */
     img.card {
       display: block;
-      max-width: 420px;   /* 桌機最大寬度 */
-      width: 92%;         /* 手機自動縮放 */
+      max-width: 420px;
+      width: 92%;
       height: auto;
-      margin: 20px auto;  /* 上下留白，左右置中 */
-      border-radius: 15px; 
+      margin: 20px auto;
+      border-radius: 15px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.18);
     }
 
-    /* ✅ 並列：適用門市 & 專屬預約通道 */
+    /* ✅ 並列 */
     .row {
       display: flex;
       flex-wrap: wrap;
@@ -92,51 +87,36 @@
       min-width: 260px;
     }
 
-    /* ✅ 可愛按鈕 */
-    .cute-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    /* ✅ 簡單圓角矩形按鈕 */
+    .simple-btn {
+      display: inline-block;
       background-color: var(--brand-accent);
       color: #fff;
-      font-weight: 700;
+      font-weight: 600;
       padding: 12px 20px;
-      border-radius: 999px;            /* 膠囊形狀 */
+      border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 6px 14px rgba(255,111,97,0.35);
-      transition: transform 0.15s ease, background 0.25s ease, box-shadow 0.25s ease;
-      will-change: transform;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.15s;
     }
-    .cute-btn:hover {
+    .simple-btn:hover {
       background-color: var(--brand-accent-hover);
-      transform: translateY(-1px) scale(1.03);
-      box-shadow: 0 10px 20px rgba(255,111,97,0.35);
+      transform: translateY(-2px);
     }
-    .cute-btn:active {
-      transform: translateY(0) scale(0.99);
-    }
-
-    /* 讓 emoji 當作小圖示更穩定對齊 */
-    .cute-btn .icon {
-      font-size: 1.1em;
-      line-height: 1;
+    .simple-btn:active {
+      transform: translateY(0);
     }
 
-    /* 手機優化 */
     @media (max-width: 768px) {
-      header { height: 190px; } /* 手機縮短 Banner 高度 */
+      header { height: 190px; }
       h2 { font-size: 1rem; }
-    }
-
-    /* 偏好減少動效的使用者 */
-    @media (prefers-reduced-motion: reduce) {
-      .cute-btn { transition: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ 滿版 Banner 背景 -->
+  <!-- ✅ Banner -->
   <header aria-label="2026 新春活動主視覺"></header>
 
   <section>
@@ -159,7 +139,7 @@
     <h2>集點卡樣式</h2>
     <img src="card-sample.png" alt="集點卡樣式預覽" class="card"/>
 
-    <!-- ✅ 並列區塊：左側門市、右側預約按鈕 -->
+    <!-- ✅ 並列區塊 -->
     <div class="row">
       <div class="col">
         <h2>適用門市</h2>
@@ -175,10 +155,9 @@
           href="https://www.notion.so/25794317ed31805296bae04b14061ba8#25b94317ed318092a678c93ca2ea845a" 
           target="_blank" 
           rel="noopener" 
-          class="cute-btn"
-          aria-label="點我立即預約（開新視窗）"
+          class="simple-btn"
         >
-          <span class="icon">🐰</span> 點我立即預約
+          點我立即預約
         </a>
       </div>
     </div>
@@ -193,4 +172,3 @@
 
 </body>
 </html>
-
