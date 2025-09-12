@@ -13,11 +13,15 @@
       background-color: #fff;
       color: #333;
     }
+
+    /* ✅ Banner 全寬覆蓋 */
     header {
-      background: #FFEDD5;
-      padding: 20px;
-      text-align: center;
+      width: 100%;
+      height: 250px; /* 你可以依需求調整高度 */
+      background: url("banner-2026.png") no-repeat center center;
+      background-size: cover; /* 讓圖片自動覆蓋 */
     }
+
     section {
       padding: 20px;
       max-width: 900px;
@@ -48,30 +52,26 @@
       .columns {
         flex-direction: column;
       }
+      header {
+        height: 180px; /* 手機上縮短一點高度 */
+      }
     }
 
-    /* ✅ 新增圖片樣式 */
-    img.responsive {
-      display: block;
-      max-width: 100%;   /* 不會超過螢幕 */
-      height: auto;
-      margin: 0 auto;    /* 水平置中 */
-    }
-
+    /* ✅ 集點卡樣式圖片 */
     img.card {
       display: block;
-      max-width: 400px;  /* 桌機最大寬度 */
-      width: 90%;        /* 手機縮放 */
+      max-width: 400px;   /* 桌機最大寬度 */
+      width: 90%;         /* 手機縮放 */
       height: auto;
-      margin: 20px auto; /* 上下留白，左右置中 */
+      margin: 20px auto;  /* 上下留白，左右置中 */
+      border-radius: 15px; /* 圓角 */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* 陰影 */
     }
   </style>
 </head>
 <body>
 
-<header>
-   <img src="banner-2026.png" alt="2026 新春活動 Banner" class="responsive"/>
-</header>
+<header></header> <!-- ✅ Banner 不再用 <img> 而是背景圖 -->
 
 <section>
   <h2>活動期間</h2>
