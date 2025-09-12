@@ -18,10 +18,6 @@
       padding: 20px;
       text-align: center;
     }
-    header img {
-      max-width: 100%;
-      height: auto;
-    }
     section {
       padding: 20px;
       max-width: 900px;
@@ -53,12 +49,28 @@
         flex-direction: column;
       }
     }
+
+    /* ✅ 新增圖片樣式 */
+    img.responsive {
+      display: block;
+      max-width: 100%;   /* 不會超過螢幕 */
+      height: auto;
+      margin: 0 auto;    /* 水平置中 */
+    }
+
+    img.card {
+      display: block;
+      max-width: 400px;  /* 桌機最大寬度 */
+      width: 90%;        /* 手機縮放 */
+      height: auto;
+      margin: 20px auto; /* 上下留白，左右置中 */
+    }
   </style>
 </head>
 <body>
 
 <header>
-   <img src="banner-2026.png" alt="2026 新春活動 Banner" />
+   <img src="banner-2026.png" alt="2026 新春活動 Banner" class="responsive"/>
 </header>
 
 <section>
@@ -79,7 +91,7 @@
   </div>
 
   <h2>集點卡樣式</h2>
-<img src="card-sample.png" alt="集點卡樣式"/>
+  <img src="card-sample.png" alt="集點卡樣式" class="card"/>
 
   <h2>活動資格</h2>
   <div class="columns">
