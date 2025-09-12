@@ -82,6 +82,7 @@
     }
     .col { text-align: center; }
 
+    /* ✅ 按鈕 */
     .simple-btn {
       display: inline-block;
       background-color: var(--brand-accent);
@@ -128,6 +129,18 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
+    /* ✅ 門市資訊換旗桿圖示 */
+    .store-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .store-list li {
+      background: url("flag-icon.png") no-repeat left center;
+      background-size: 18px 18px;
+      padding-left: 28px;
+      margin: 8px 0;
+    }
+
     @media (max-width: 768px) {
       header { height: 190px; }
       h2 { font-size: 1rem; }
@@ -161,7 +174,7 @@
     <div class="row">
       <div class="col">
         <h2>適用門市</h2>
-        <ul style="text-align: left; display: inline-block;">
+        <ul class="store-list">
           <li>勤美公益店</li>
           <li>沙鹿站前店</li>
         </ul>
@@ -170,7 +183,7 @@
       <div class="col">
         <h2>專屬預約通道</h2>
         <a 
-          href="https://www.notion.so/25794317ed31805296bae04b14061ba8#25b94317ed318092a678c93ca2ea845a" 
+          href="https://blackbox3c.simplybook.asia/v2/#book/service/7/count/1/" 
           target="_blank" 
           rel="noopener" 
           class="simple-btn"
@@ -187,10 +200,8 @@
       <li>兌獎時間將於農曆新年期間公告，請關注 FB 粉專</li>
     </ol>
 
-    <!-- 活動細節大圖 -->
     <img src="detail-2026.png" alt="2026新春福宴宣傳圖" class="detail-img"/>
 
-    <!-- 三張促銷圖 -->
     <div class="triple-images">
       <img src="promo-1.png" alt="特惠價9折"/>
       <img src="promo-2.png" alt="點數3倍送"/>
