@@ -6,8 +6,8 @@
   <title>2026新春盛宴集氣</title>
   <style>
     :root{
-      --brand-accent:#ff6f61;
-      --brand-accent-hover:#ff8a75;
+      --brand-accent:#e0e0e0;          /* ✅ 淺灰色按鈕 */
+      --brand-accent-hover:#cfcfcf;    /* hover 更深灰 */
       --section-bg:#FFF7ED;
       --tag-bg: orange;
       --text:#333;
@@ -74,30 +74,31 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.18);
     }
 
-    /* ✅ 並列（改用 Grid 保證不超出） */
+    /* ✅ 並列（用 Grid，保持一致寬度） */
     .row {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* 兩欄等寬 */
+      grid-template-columns: 1fr 1fr;
       gap: 20px;
       margin-top: 10px;
       align-items: start;
     }
     .col {
-      background: none; /* 保持乾淨 */
+      text-align: center; /* 讓內部內容置中 */
     }
 
-    /* ✅ 簡單圓角矩形按鈕 */
+    /* ✅ 簡單圓角矩形淺灰按鈕 */
     .simple-btn {
       display: inline-block;
       background-color: var(--brand-accent);
-      color: #fff;
+      color: #000;
       font-weight: 600;
       padding: 12px 20px;
       border-radius: 8px;
       text-decoration: none;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       transition: background 0.3s, transform 0.15s;
+      margin-top: 10px;
     }
     .simple-btn:hover {
       background-color: var(--brand-accent-hover);
@@ -138,11 +139,11 @@
     <h2>集點卡樣式</h2>
     <img src="card-sample.png" alt="集點卡樣式預覽" class="card"/>
 
-    <!-- ✅ 強制左右並列，但總寬度不超出容器 -->
+    <!-- ✅ 並列區塊 -->
     <div class="row">
       <div class="col">
         <h2>適用門市</h2>
-        <ul>
+        <ul style="text-align: left; display: inline-block;">
           <li>勤美公益店</li>
           <li>沙鹿站前店</li>
         </ul>
