@@ -129,16 +129,27 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    /* ✅ 門市資訊換旗桿圖示 */
+    /* ✅ 門市資訊用內嵌 SVG 旗桿圖示 */
     .store-list {
       list-style: none;
       padding-left: 0;
     }
     .store-list li {
-      background: url("flag-icon.png") no-repeat left center;
-      background-size: 18px 18px;
+      position: relative;
       padding-left: 28px;
       margin: 8px 0;
+    }
+    .store-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      background: no-repeat center/contain;
+      /* 黑色旗桿 SVG */
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="black"><path d="M6 3v18h2v-6h10l-2-4 2-4H8V3H6z"/></svg>');
     }
 
     @media (max-width: 768px) {
