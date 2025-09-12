@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2026新春盛宴集氣</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background: #FFEDD5;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      background-color: orange;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .column {
+      flex: 1;
+      min-width: 200px;
+      background: #FFF7ED;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    @media (max-width: 768px) {
+      .columns {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="your-header-image.png" alt="2026新春活動主視覺" />
+</header>
+
+<section>
+  <h2>活動期間</h2>
+  <p><strong>2025/09/14 ～ 2026/02/14</strong></p>
+
+  <h2>活動內容</h2>
+  <p>透過「慶典活動專案價」購買保貼即可獲得活動印花乙枚，集滿10點即可於公告兌換日期內兌換「2026新春福氣賀禮」。</p>
+
+  <h2>特別加碼</h2>
+  <div class="columns">
+    <div class="column">
+      <p><strong>特別加碼1：</strong><br/>購買 Simmpo 保貼（不限型號款式）再加贈1點</p>
+    </div>
+    <div class="column">
+      <p><strong>特別加碼2：</strong><br/>透過活動網頁專屬連結於活動日前線上預約，再加贈1點（限每日一次）</p>
+    </div>
+  </div>
+
+  <h2>集點卡樣式</h2>
+  <img src="your-card-image.png" alt="集點卡樣式" style="width:100%; max-width:400px;" />
+
+  <h2>活動資格</h2>
+  <div class="columns">
+    <div class="column">線上預約或直接來店</div>
+    <div class="column">➡️</div>
+    <div class="column">於活動貼文按讚並留言 #集氣+1 可得「專案價優惠」</div>
+    <div class="column">➡️</div>
+    <div class="column">取件時出示集點卡，線上預約可得加碼點數，請主動告知服務人員</div>
+  </div>
+
+  <h2>適用門市</h2>
+  <ul>
+    <li>勤美公益店</li>
+    <li>沙鹿站前店</li>
+  </ul>
+
+  <h2>專屬預約通道</h2>
+  <p><a href="https://www.notion.so/25794317ed31805296bae04b14061ba8#25b94317ed318092a678c93ca2ea845a" target="_blank">點我立即預約</a></p>
+
+  <h2>活動細節</h2>
+  <ol>
+    <li>集點卡將由門市官方 LINE 帳號發送，門市之間不互通</li>
+    <li>獎項須本人憑卡兌換，不得合併點數</li>
+    <li>兌獎時間將於農曆新年期間公告，請關注 FB 粉專</li>
+  </ol>
+</section>
+
+</body>
+</html>
