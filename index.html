@@ -6,8 +6,8 @@
   <title>2026新春盛宴集氣</title>
   <style>
     :root{
-      --brand-accent:#e0e0e0;          
-      --brand-accent-hover:#cfcfcf;    
+      --brand-accent:#e0e0e0;
+      --brand-accent-hover:#cfcfcf;
       --section-bg:#FFF7ED;
       --tag-bg: orange;
       --text:#333;
@@ -24,7 +24,7 @@
       color: var(--text);
     }
 
-    /* ✅ Banner：滿版覆蓋頂端 */
+    /* Banner */
     header {
       width: 100%;
       height: 260px;
@@ -112,6 +112,22 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
+    /* ✅ 三張小圖並排 */
+    .triple-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+    .triple-images img {
+      flex: 1;
+      max-width: 30%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
     @media (max-width: 768px) {
       header { height: 190px; }
       h2 { font-size: 1rem; }
@@ -171,9 +187,15 @@
       <li>兌獎時間將於農曆新年期間公告，請關注 FB 粉專</li>
     </ol>
 
-    <!-- ✅ 插入活動細節圖片 -->
+    <!-- 活動細節大圖 -->
     <img src="detail-2026.png" alt="2026新春福宴宣傳圖" class="detail-img"/>
 
+    <!-- 三張促銷圖 -->
+    <div class="triple-images">
+      <img src="promo-1.png" alt="特惠價9折"/>
+      <img src="promo-2.png" alt="點數3倍送"/>
+      <img src="promo-3.png" alt="新春賀禮"/>
+    </div>
   </section>
 
 </body>
