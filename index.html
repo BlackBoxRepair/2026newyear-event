@@ -5,119 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>2026新春盛宴集氣</title>
   <style>
+    :root{
+      --brand-accent:#ff6f61; /* 按鈕主色 */
+      --brand-accent-hover:#ff8a75;
+      --section-bg:#FFF7ED;
+      --tag-bg: orange;
+      --text:#333;
+      --container-max: 900px;
+      --radius: 12px;
+    }
+
+    /* 全站基礎 */
     body {
-      font-family: "Noto Sans TC", sans-serif;
+      font-family: "Noto Sans TC", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
       background-color: #fff;
-      color: #333;
+      color: var(--text);
     }
 
-    /* ✅ Banner 全寬覆蓋 */
+    /* ✅ Banner：滿版覆蓋頂端，不留白 */
     header {
       width: 100%;
-      height: 250px; /* 你可以依需求調整高度 */
+      height: 260px; /* 桌機高度，可依需求調整 */
       background: url("banner-2026.png") no-repeat center center;
-      background-size: cover; /* 讓圖片自動覆蓋 */
+      background-size: cover;
     }
 
+    /* 主要容器 */
     section {
       padding: 20px;
-      max-width: 900px;
+      max-width: var(--container-max);
       margin: auto;
     }
+
+    /* 小標題色塊 */
     h2 {
-      background-color: orange;
+      background-color: var(--tag-bg);
       color: white;
-      padding: 10px;
+      padding: 10px 12px;
       border-radius: 6px;
+      font-size: 1.1rem;
+      margin-top: 24px;
     }
+
+    /* 段落/列表 */
+    ul { padding-left: 20px; margin: 8px 0 0; }
+    ol { padding-left: 20px; margin: 8px 0 0; }
+
+    /* 多欄區塊（特別加碼、活動資格） */
     .columns {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      margin-top: 10px;
     }
     .column {
-      flex: 1;
-      min-width: 200px;
-      background: #FFF7ED;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    @media (max-width: 768px) {
-      .columns {
-        flex-direction: column;
-      }
-      header {
-        height: 180px; /* 手機上縮短一點高度 */
-      }
+      flex: 1 1 220px;
+      background: var(--section-bg);
+      padding: 12px;
+      border-radius: var(--radius);
     }
 
-    /* ✅ 集點卡樣式圖片 */
+    /* ✅ 集點卡圖片：置中、圓角＋陰影、RWD 尺寸 */
     img.card {
       display: block;
-      max-width: 400px;   /* 桌機最大寬度 */
-      width: 90%;         /* 手機縮放 */
+      max-width: 420px;   /* 桌機最大寬度 */
+      width: 92%;         /* 手機自動縮放 */
       height: auto;
       margin: 20px auto;  /* 上下留白，左右置中 */
-      border-radius: 15px; /* 圓角 */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* 陰影 */
+      border-radius: 15px; 
+      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    }
+
+    /* ✅ 並列：適用門市 & 專屬預約通道 */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+      align-items: flex-start;
+    }
+    .col {
+      flex: 1 1 320px;
+      min-width: 260px;
+    }
+
+    /* ✅ 可愛按鈕 */
+    .cute-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--brand-accent);
+      color: #fff;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 999px;            /* 膠囊形狀 */
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(255,111,97,0.35);
+      transition: transform 0.15s ease, background 0.25s ease, box-shadow 0.25s ease;
+      will-change: transform;
+    }
+    .cute-btn:hover {
+      background-color: var(--brand-accent-hover);
+      transform: translateY(-1px) scale(1.03);
+      box-shadow: 0 10px 20px rgba(255,111,97,0.35);
+    }
+    .cute-btn:active {
+      transform: translateY(0) scale(0.99);
+    }
+
+    /* 讓 emoji 當作小圖示更穩定對齊 */
+    .cute-btn .icon {
+      font-size: 1.1em;
+      line-height: 1;
+    }
+
+    /* 手機優化 */
+    @media (max-width: 768px) {
+      header { height: 190px; } /* 手機縮短 Banner 高度 */
+      h2 { font-size: 1rem; }
+    }
+
+    /* 偏好減少動效的使用者 */
+    @media (prefers-reduced-motion: reduce) {
+      .cute-btn { transition: none; }
     }
   </style>
 </head>
 <body>
 
-<header></header> <!-- ✅ Banner 不再用 <img> 而是背景圖 -->
+  <!-- ✅ 滿版 Banner 背景 -->
+  <header aria-label="2026 新春活動主視覺"></header>
 
-<section>
-  <h2>活動期間</h2>
-  <p><strong>2025/09/14 ～ 2026/02/14</strong></p>
+  <section>
+    <h2>活動期間</h2>
+    <p><strong>2025/09/14 ～ 2026/02/14</strong></p>
 
-  <h2>活動內容</h2>
-  <p>透過「慶典活動專案價」購買保貼即可獲得活動印花乙枚，集滿10點即可於公告兌換日期內兌換「2026新春福氣賀禮」。</p>
+    <h2>活動內容</h2>
+    <p>透過「慶典活動專案價」購買保貼即可獲得活動印花乙枚，集滿10點即可於公告兌換日期內兌換「2026新春福氣賀禮」。</p>
 
-  <h2>特別加碼</h2>
-  <div class="columns">
-    <div class="column">
-      <p><strong>特別加碼1：</strong><br/>購買 Simmpo 保貼（不限型號款式）再加贈1點</p>
+    <h2>特別加碼</h2>
+    <div class="columns">
+      <div class="column">
+        <p><strong>特別加碼1：</strong><br/>購買 Simmpo 保貼（不限型號款式）再加贈1點</p>
+      </div>
+      <div class="column">
+        <p><strong>特別加碼2：</strong><br/>透過活動網頁專屬連結於活動日前線上預約，再加贈1點（限每日一次）</p>
+      </div>
     </div>
-    <div class="column">
-      <p><strong>特別加碼2：</strong><br/>透過活動網頁專屬連結於活動日前線上預約，再加贈1點（限每日一次）</p>
+
+    <h2>集點卡樣式</h2>
+    <img src="card-sample.png" alt="集點卡樣式預覽" class="card"/>
+
+    <!-- ✅ 並列區塊：左側門市、右側預約按鈕 -->
+    <div class="row">
+      <div class="col">
+        <h2>適用門市</h2>
+        <ul>
+          <li>勤美公益店</li>
+          <li>沙鹿站前店</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h2>專屬預約通道</h2>
+        <a 
+          href="https://www.notion.so/25794317ed31805296bae04b14061ba8#25b94317ed318092a678c93ca2ea845a" 
+          target="_blank" 
+          rel="noopener" 
+          class="cute-btn"
+          aria-label="點我立即預約（開新視窗）"
+        >
+          <span class="icon">🐰</span> 點我立即預約
+        </a>
+      </div>
     </div>
-  </div>
 
-  <h2>集點卡樣式</h2>
-  <img src="card-sample.png" alt="集點卡樣式" class="card"/>
-
-  <h2>活動資格</h2>
-  <div class="columns">
-    <div class="column">線上預約或直接來店</div>
-    <div class="column">➡️</div>
-    <div class="column">於活動貼文按讚並留言 #集氣+1 可得「專案價優惠」</div>
-    <div class="column">➡️</div>
-    <div class="column">取件時出示集點卡，線上預約可得加碼點數，請主動告知服務人員</div>
-  </div>
-
-  <h2>適用門市</h2>
-  <ul>
-    <li>勤美公益店</li>
-    <li>沙鹿站前店</li>
-  </ul>
-
-  <h2>專屬預約通道</h2>
-  <p><a href="https://www.notion.so/25794317ed31805296bae04b14061ba8#25b94317ed318092a678c93ca2ea845a" target="_blank">點我立即預約</a></p>
-
-  <h2>活動細節</h2>
-  <ol>
-    <li>集點卡將由門市官方 LINE 帳號發送，門市之間不互通</li>
-    <li>獎項須本人憑卡兌換，不得合併點數</li>
-    <li>兌獎時間將於農曆新年期間公告，請關注 FB 粉專</li>
-  </ol>
-</section>
+    <h2>活動細節</h2>
+    <ol>
+      <li>集點卡將由門市官方 LINE 帳號發送，門市之間不互通</li>
+      <li>獎項須本人憑卡兌換，不得合併點數</li>
+      <li>兌獎時間將於農曆新年期間公告，請關注 FB 粉專</li>
+    </ol>
+  </section>
 
 </body>
 </html>
+
